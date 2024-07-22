@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ category }} Blog Posts</title>
+</head>
+<body>
+    <h2>{{ category }} Blog Posts</h2>
+    {% for post in blog_posts %}
+        <h3>{{ post.title }}</h3>
+        <img src="{{ post.image.url }}" alt="Blog Image">
+        <p>{{ post.summary }}</p>
+    {% endfor %}
+    <a href="{% url 'list_blog_posts' %}">Back to Blog Posts</a>
+</body>
+</html>

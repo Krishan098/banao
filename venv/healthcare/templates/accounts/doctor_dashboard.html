@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Dashboard</title>
+</head>
+<body>
+    <h2>Doctor Dashboard</h2>
+    <h3>Welcome, {{ user.first_name }} {{ user.last_name }}</h3>
+    <p>Address: {{ user.address }}</p>
+    <img src="{{ user.profile_picture.url }}" alt="Profile Picture">
+    <a href="{% url 'logout' %}">Logout</a>
+    <h3>Manage Blog Posts</h3>
+    <a href="{% url 'create_blog_post' %}">Create New Blog Post</a>
+    <a href="{% url 'list_blog_posts' %}">View Blog Posts</a>
+</body>
+</html>

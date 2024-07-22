@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Dashboard</title>
+</head>
+<body>
+    <h2>Patient Dashboard</h2>
+    <h3>Welcome, {{ user.first_name }} {{ user.last_name }}</h3>
+    <p>Address: {{ user.address }}</p>
+    <img src="{{ user.profile_picture.url }}" alt="Profile Picture">
+    <a href="{% url 'logout' %}">Logout</a>
+    <h3>View Blogs</h3>
+    <a href="{% url 'list_blog_posts' %}">View Blog Posts</a>
+    <a href="https://www.northshore.org/?gclid=8ccb26a944121379106b40375aafde89&gclsrc=3p.ds&msclkid=8ccb26a944121379106b40375aafde89">Doctor's list</a>
+</body>
+</html>
